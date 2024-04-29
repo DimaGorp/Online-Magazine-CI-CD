@@ -9,3 +9,9 @@ def contact(request):
     return render(request, 'contact/contact.html')
 def service(request):
     return render(request, 'service/service.html')
+
+def shop_single(request):
+    return render(request, 'shop_single/shop_single.html')
+def shop(request):
+    return render(request, 'shop/shop.html')
+
