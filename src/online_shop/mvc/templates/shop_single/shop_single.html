@@ -223,10 +223,10 @@ Introducing a delightful addition to any feathered friend collection, this cocka
                                 </div>
                                 <div class="row pb-3">
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy" href = "{% url 'cart'%}">Buy</button>
+                                        <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='{% url 'cart' %}'">Buy</button>
                                     </div>
                                     <div class="col d-grid">
-                                        <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard">Add To Cart</button>
+                                        <button type="button" class="btn btn-success btn-lg" onclick="window.location.href='{% url 'shop' %}'">Add To Cart</button>
                                     </div>
                                 </div>
                             </form>
