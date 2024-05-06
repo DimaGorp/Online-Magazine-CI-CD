@@ -12,6 +12,27 @@ def service(request):
 
 def shop_single(request):
     return render(request, 'shop_single/shop_single.html')
+def shop_single(request):
+    return render(request, 'shop_single/shop_single.html')
+def shop_single_arci(request):
+    return render(request, 'shop_single/shop_single_arci.html')
+def shop_single_dack(request):
+    return render(request, 'shop_single/shop_single_dack.html')
+def shop_single_dragi(request):
+    return render(request, 'shop_single/shop_single_dragi.html')
+def shop_single_fog(request):
+    return render(request, 'shop_single/shop_single_fog.html')
+def shop_single_huli(request):
+    return render(request, 'shop_single/shop_single_huli.html')
+def shop_single_mykola(request):
+    return render(request, 'shop_single/shop_single_mykola.html')
+def shop_single_pinin(request):
+    return render(request, 'shop_single/shop_single_pinin.html')
+
+def shop_single_skuf(request):
+    return render(request, 'shop_single/shop_single_skuf.html')
+
+
 def shop(request):
     return render(request, 'shop/shop.html')
 
