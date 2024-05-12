@@ -14,7 +14,11 @@ SECRET_KEY = 'your_secret_key'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+# online_shop/settings.py
+
+# Add '0.0.0.0' to the list of allowed hosts
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '0.0.0.0']
+
 
 
 # Application definition
