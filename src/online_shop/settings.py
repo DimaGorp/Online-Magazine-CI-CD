@@ -17,9 +17,7 @@ DEBUG = True
 # online_shop/settings.py
 
 # Add '0.0.0.0' to the list of allowed hosts
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]', '0.0.0.0']
-
-
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', '[::1]']
 
 # Application definition
 
