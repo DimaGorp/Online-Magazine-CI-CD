@@ -29,7 +29,7 @@ jobs:
 
     - name: Build and run Docker Compose
       run: |
-        timeout 50s docker-compose up --abort-on-container-exit || echo "Job timed out after 50 seconds"
+        timeout 30s docker-compose up --abort-on-container-exit || echo "Job timed out after 50 seconds"
         docker-compose down
       env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
