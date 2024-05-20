@@ -29,8 +29,5 @@ jobs:
 
     - name: Build and run Docker Compose
       run: |
-        docker-compose up 
-
-    - name: Stop Docker Compose
-      if: always()
-      run: docker-compose down
+        docker-compose up --abort-on-container-exit
+        docker-compose down
