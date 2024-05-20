@@ -29,6 +29,6 @@ jobs:
 
     - name: Build and run Docker Compose
       run: |
-        docker-compose up --abort-on-container-exit timeout 15s
-        docker-compose down
+        timeout 20s docker-compose up --abort-on-container-exit 
+        
         
