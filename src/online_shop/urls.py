@@ -1,8 +1,11 @@
+# /src/online_shop/urls.py
+
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from online_shop.mvc.views.views import *  # Adjusted import statement
 
 urlpatterns = [
+    path('admin/', admin.site.urls),  
     path('', index, name='index'),
     path('about/', about, name='about'),
     path('contact/', contact, name='contact'),
