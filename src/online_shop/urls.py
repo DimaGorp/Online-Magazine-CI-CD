@@ -21,4 +21,5 @@ urlpatterns = [
     path('shop_single_pinin/', shop_single_pinin, name='shop_single_pinin'),
     path('shop/', shop, name='shop'),
     path('cart/', cart, name='cart'),
+    path('order/', order, name='order')
 ]
