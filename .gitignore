@@ -11,4 +11,3 @@ __pycache__/
 .vscode/
 venv/
 requirenmnets.txt
-src/db.sqlite3

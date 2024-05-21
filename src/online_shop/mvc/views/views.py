@@ -34,6 +34,8 @@ def shop_single_skuf(request):
 
 
 def shop(request):
+   # `products = Product.objects.all()` retrieves all instances of the `Product` model from the
+   # database.
     products = Product.objects.all()
     context = {
         'products':products,
