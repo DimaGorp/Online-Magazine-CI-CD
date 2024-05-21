@@ -44,3 +44,6 @@ def shop(request):
 
 def cart(request):
     return render(request, 'cart/cart.html')
+
+def order(request):
+    return render(request, 'order/order.html')
