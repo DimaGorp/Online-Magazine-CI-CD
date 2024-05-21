@@ -1,8 +1,7 @@
 # mvc/views/views.py
 from django.shortcuts import render
-
+from ..models import Product
 def index(request):
-    
     return render(request, 'index/index.html')
 def about(request):
     return render(request, 'about/about.html')
@@ -35,7 +34,11 @@ def shop_single_skuf(request):
 
 
 def shop(request):
-    return render(request, 'shop/shop.html')
+    products = Product.objects.all()
+    context = {
+        'products':products,
+    }
+    return render(request, 'shop/shop.html',context)
 
 def cart(request):
     return render(request, 'cart/cart.html')
