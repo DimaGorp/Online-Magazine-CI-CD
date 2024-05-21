@@ -1,5 +1,5 @@
 # mvc/views/views.py
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from ..models import Product
 def index(request):
     return render(request, 'index/index.html')
@@ -10,10 +10,12 @@ def contact(request):
 def service(request):
     return render(request, 'service/service.html')
 
-def shop_single(request):
-    return render(request, 'shop_single/shop_single.html')
-def shop_single(request):
-    return render(request, 'shop_single/shop_single.html')
+def shop_single(request, product_id):
+    product = get_object_or_404(Product, id=product_id)
+    context = {
+        'product': product,  # Correcting the variable name here
+    }
+    return render(request, 'shop_single/shop_single.html', context)
 def shop_single_arci(request):
     return render(request, 'shop_single/shop_single_arci.html')
 def shop_single_dack(request):
