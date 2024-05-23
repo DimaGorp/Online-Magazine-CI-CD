@@ -1,3 +1,4 @@
-# /src/online_shop/mvc/models/__init__.py
+# src/mvc/models/__init__.py
+from .models import Product, Cart, CartItem
 
-from .models import Product
+__all__ = ['Product', 'Cart', 'CartItem']
