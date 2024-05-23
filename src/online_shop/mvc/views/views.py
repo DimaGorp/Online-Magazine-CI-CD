@@ -38,11 +38,15 @@ def shop_single_skuf(request):
 def shop(request):
    # `products = Product.objects.all()` retrieves all instances of the `Product` model from the
    # database.
-    products = Product.objects.all()
+    query = request.GET.get('query', '')  # Отримання пошукового запиту з GET-параметра
+    if query:
+        products = Product.objects.filter(name__icontains=query)  # Фільтрує товари за назвою
+    else:
+        products = Product.objects.all()  # Повертає всі товари, якщо пошуковий запит відсутній
     context = {
-        'products':products,
+        'products': products,
     }
-    return render(request, 'shop/shop.html',context)
+    return render(request, 'shop/shop.html', context)
 
 def cart(request):
     return render(request, 'cart/cart.html')

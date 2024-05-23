@@ -5,12 +5,12 @@
 <div class="container-fluid bg-white py-3 text-center">
     <div class="row justify-content-center align-items-center">
         <div class="col-md-6">
-            <form class="d-flex justify-content-center">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex justify-content-center" action="{% url 'shop' %}" method="get">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
                 <button class="btn btn-outline-primary" type="submit">
                     <i class="fa fa-search"></i>
                 </button>
-            </form>
+            </form>            
         </div>
     </div>
 
