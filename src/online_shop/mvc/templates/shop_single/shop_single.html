@@ -87,12 +87,11 @@
                             <h1 class="h2">{{product.name}}</h1>
                             <p class="h3 py-2">${{product.price}}</p>
                             <p class="py-2">
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-warning"></i>
-                                <i class="fa fa-star text-secondary"></i>
-                                <span class="list-inline-item text-dark">Rating 4.8 | 36 Comments</span>
+                                
+                                {% for _ in "x"|rjust:product.rating %}
+                                    <i class="fa fa-star text-warning"></i>
+                                {% endfor %}
+                                <p><span class="list-inline-item text-dark">Rating: {{product.rating}}</span></p>
                             </p>
                             <ul class="list-inline">
 
@@ -109,12 +108,7 @@
                             </ul>
 
                             <h6>Specification:</h6>
-                            <ul class="list-unstyled pb-3">
-                                <li>Material: Made from high-quality, plush fabric for a soft and cuddly fee</li>
-                                <li>Design: Intricate details capturing the charm and essence of cockatiels, including feather patterns, beak shape, and expressive eyes</li>
-                                <li>Recommended Use: Ideal for bird enthusiasts, collectors, or anyone in need of a soft and adorable companion</li>
-
-                            </ul>
+                            <p>{{product.specifications}}</p>
 
                                 </div>
                                 <div class="row pb-3">
