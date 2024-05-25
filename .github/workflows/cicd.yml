@@ -33,5 +33,10 @@ jobs:
         docker-compose down
       env:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
+
+
+    - name: Run tests with Pytest
+      run: |
+        python manage.py test src
         
         
