@@ -13,11 +13,8 @@
         <!--<p id="delivery-info" class="delivery__title">- DELIVERY -</p>-->
         <h2 class="delivery__heading">Delivery &amp; Payment</h2>
         <span class="delivery__first-text-block">
-            <span class="delivery__description">We promise not just fast water delivery but designate a specific period
-                of time —</span>
-            <span class="delivery__description-time">60 min</span>
-            <span class="delivery__description-star">*</span>
-            <span class="delivery__description point">.</span>
+            <span class="delivery__description">We promise just fast and high quality delivery of plush toys. </span>
+
         </span>
         <ul class="delivery__list">
             <li class="delivery__item">Subject to ordering before 18:00 (on Sun until 15:00);</li>
@@ -28,18 +25,11 @@
             <li class="delivery__item">Delivery outside the city may have a number of restrictions — check with the
                 manager.</li>
         </ul>
-        <div class="image-with-text">
-            <img class="delivery__discount-image" src="{%static 'img/dimaa.png'%}" alt="percent-discount">
-            <div class="delivery__discount-text">
-                <p class="delivery__discount">Get a discount for our delay:</p>
-                <p class="delivery__discount-item">10 min. = 10% discount!</p>
-            </div>
-        </div>
+
+
+
         <ul class="delivery__discount-info">
-            <li class="delivery__discount-info-item">The discount is not provided for complex traffic conditions;</li>
-            <li class="delivery__discount-info-item">The discount is not available the day after the public holiday;
-            </li>
-            <li class="delivery__discount-info-item">The maximum discount is not more than $10.</li>
+
         </ul>
     </div>
     <div class="delivery__form">
@@ -64,9 +54,7 @@
                 </select><br>
             </div>
             -->
-            <div class="input-box">
-                <input type="text" class="input-field" name="amount" placeholder="Amount*"><br>
-            </div>
+
             <div class="input-box">
                 <input type="date" class="select-date" name="date" value="2023-01-01"><br>
             </div>
@@ -128,7 +116,7 @@
 }
 
 .delivery__heading {
-    color: #002579;
+    color: #2EB872;
     font-size: 38px;
     font-family: 'Nunito', sans-serif;
 }
@@ -219,7 +207,7 @@
 
 .delivery__item::before {
     content: "•";
-    color: #002579;
+    color: #2EB872;
     margin-right: 8px;
     font-size: 1.5em;
     vertical-align: middle;
@@ -231,6 +219,17 @@
     display: flex;
     justify-content: center;
 }
+
+.delivery__form {
+        grid-column: 2 / span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 60px 0 0 0;
+        vertical-align: baseline;
+    }
 
 .delivery__form form {
 
@@ -280,7 +279,7 @@
 }
 
 input[type="submit"] {
-    background-color: #21b6ff;
+    background-color: #2EB872;
     color: #ffffff;
     font-family: 'Work Sans', sans-serif;
     font-weight: 600;
