@@ -1,12 +1,15 @@
 from django.test import TestCase
 from online_shop.mvc.models.models import Product, Cart, CartItem
+
 class ProductModelTest(TestCase):
     def setUp(self):
         self.product = Product.objects.create(
             name="Test Product",
             description="This is a test product",
             price=99.99,
-            image="products/test.png"
+            image="products/test.png",
+            rating=4,  # Новое поле для рейтинга
+            specifications="Test specifications"  # Новое поле для спецификаций
         )
 
     def test_product_creation(self):
@@ -14,6 +17,8 @@ class ProductModelTest(TestCase):
         self.assertEqual(self.product.description, "This is a test product")
         self.assertEqual(self.product.price, 99.99)
         self.assertEqual(self.product.image, "products/test.png")
+        self.assertEqual(self.product.rating, 4)  # Проверка нового поля rating
+        self.assertEqual(self.product.specifications, "Test specifications")  # Проверка нового поля specifications
 
     def test_product_str(self):
         self.assertEqual(str(self.product), "Test Product")
@@ -51,10 +56,13 @@ class CartItemModelTest(TestCase):
         self.assertEqual(self.cart_item.quantity, 1)  # Исправлено на ожидаемое значение 1
         self.assertTrue(self.cart_item.is_active)
 
-
     def test_cart_item_sub_total(self):
         self.assertEqual(self.cart_item.sub_total(), self.product.price * self.cart_item.quantity)
 
     def test_cart_item_str(self):
-    # Проверяем, что строковое представление элемента корзины содержит только название продукта
-        self.assertEqual(str(self.cart_item), self.cart_item.product.name)
+        # Проверяем, что строковое представление элемента корзины содержит название продукта
+        expected_str = self.cart_item.product.name
+        self.assertEqual(str(self.cart_item), expected_str)
+
+
+
