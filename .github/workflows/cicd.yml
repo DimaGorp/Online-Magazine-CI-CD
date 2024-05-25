@@ -37,6 +37,6 @@ jobs:
 
     - name: Run tests with Pytest
       run: |
-        python manage.py test src
+        python src/manage.py test 
         
         
