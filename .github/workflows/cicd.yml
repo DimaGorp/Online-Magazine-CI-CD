@@ -39,5 +39,18 @@ jobs:
       run: |
         python src/manage.py test online_shop.mvc.tests.test_models
         python src/manage.py test online_shop.mvc.tests.test_views
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Deploy to Heroku
+      uses: akhileshns/heroku-deploy@v3.12.12
+      with:
+        heroku_api_key: ${{ secrets.HEROKU_KEY }}
+        heroku_app_name: "your-heroku-app-name"
+        heroku_email: "your-email@example.com"
+        buildpack: "heroku/python"
+
         
         
