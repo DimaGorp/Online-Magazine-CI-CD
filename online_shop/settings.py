@@ -27,7 +27,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'shop',  # Updated app name
+    'shop.apps.ShopConfig',  # Updated app name
     'rest_framework',
 ]
 
