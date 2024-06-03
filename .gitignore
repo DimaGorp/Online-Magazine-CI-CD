@@ -8,6 +8,7 @@ __pycache__/
 venv/
 # Editor directories
 .idea/
-.vscode/
 /staticfiles/
+.vscode/
+
 
