@@ -37,7 +37,7 @@ jobs:
     - name: Run Django migrations
       run: python manage.py migrate
     - name: Collect static files
-      run: python src/manage.py collectstatic --noinput
+      run: python manage.py collectstatic --noinput
 
     - name: Run tests with Pytest
       run: |
