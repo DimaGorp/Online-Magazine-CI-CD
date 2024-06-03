@@ -9,4 +9,5 @@ venv/
 # Editor directories
 .idea/
 .vscode/
+/staticfiles/
 
