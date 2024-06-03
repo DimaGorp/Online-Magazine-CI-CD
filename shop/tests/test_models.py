@@ -1,5 +1,5 @@
 from django.test import TestCase
-from online_shop.mvc.models.models import Product, Cart, CartItem
+from shop.models import Product, Cart, CartItem
 
 class ProductModelTest(TestCase):
     def setUp(self):

@@ -2,7 +2,7 @@
 
 from django.contrib import admin
 from django.urls import path, include
-from online_shop.mvc.views.views import *  # Adjusted import statement
+from shop.views import *  # Adjusted import statement
 from django.conf import settings
 from django.conf.urls.static import static
 

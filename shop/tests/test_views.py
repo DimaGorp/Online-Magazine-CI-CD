@@ -1,8 +1,8 @@
 from django.test import TestCase, Client, RequestFactory
 from django.urls import reverse
-from online_shop.mvc.models import Product, Cart, CartItem
+from shop.models import Product, Cart, CartItem
 
-from online_shop.mvc.views.views import remove_item_cart
+from shop.views import remove_item_cart
 
 
 class ViewTests(TestCase):
