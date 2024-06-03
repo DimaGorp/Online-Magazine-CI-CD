@@ -1,7 +1,7 @@
 # src/mvc/admin.py
 
 from django.contrib import admin
-from .models import Product  # оновлено імпорт
+from shop.models import Product  # оновлено імпорт
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
