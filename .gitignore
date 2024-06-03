@@ -5,8 +5,8 @@ __pycache__/
 
 # macOS
 .DS_Store
-
+venv/
 # Editor directories
 .idea/
 .vscode/
-venv/
+
