@@ -35,15 +35,15 @@ jobs:
         SECRET_KEY: ${{secrets.SECRET_KEY}}
 
     - name: Run Django migrations
-      run: python src/manage.py migrate
+      run: python manage.py migrate
 
     - name: Collect static files
-      run: python src/manage.py collectstatic --noinput
+      run: python manage.py collectstatic --noinput
 
     - name: Run tests with Pytest
       run: |
-        python src/manage.py test online_shop.mvc.tests.test_models
-        python src/manage.py test online_shop.mvc.tests.test_views
+        python manage.py test online_shop.mvc.tests.test_models
+        python manage.py test online_shop.mvc.tests.test_views
 
   deploy:
     needs: build
